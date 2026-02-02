@@ -1,0 +1,16 @@
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="/">
+      <img class="brand__logo" src="/images/logo.jpg" alt="SolviTech logo" />
+      <span class="brand__name">SolviTech</span>
+    </a>
+
+    <nav class="nav">
+      <a class="nav__link <%= active === 'home' ? 'is-active' : '' %>" href="/">Home</a>
+      <a class="nav__link <%= active === 'services' ? 'is-active' : '' %>" href="/services">Services</a>
+      <a class="nav__link <%= active === 'solutions' ? 'is-active' : '' %>" href="/solutions">Solutions</a>
+      <a class="nav__link <%= active === 'about' ? 'is-active' : '' %>" href="/about">About</a>
+      <a class="nav__cta" href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>

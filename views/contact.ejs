@@ -1,0 +1,67 @@
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">Contact Us</h2>
+      <p class="section__desc">
+        Tell us what you want to automate or improve. We’ll respond with the best solution and next steps.
+      </p>
+    </div>
+
+    <div class="grid2">
+      <!-- Left info -->
+      <div class="card">
+        <div class="card__pad">
+          <h3 class="card__title">Let’s talk</h3>
+          <p class="card__text">
+            We provide business-first AI solutions, automation, websites and chatbot systems for scalable growth.
+          </p>
+
+          <div class="hr"></div>
+
+          <p class="muted"><strong>Email:</strong> solvitech0@gmail.com</p>
+          <p class="muted"><strong>Phone:</strong> +1 (647) 780-1252</p>
+          <p class="muted"><strong>Response Time:</strong> Within 24 hours</p>
+        </div>
+      </div>
+
+      <!-- Right form -->
+      <div class="card">
+        <div class="card__pad">
+          <h3 class="card__title">Request Strategy Call</h3>
+          <% if (typeof success !== "undefined") { %>
+            <div class="card" style="margin-bottom:14px;">
+              <div class="card__pad">
+                <strong style="color:#00ff99;"><%= success %></strong>
+              </div>
+            </div>
+          <% } %>
+
+          <% if (typeof error !== "undefined") { %>
+            <div class="card" style="margin-bottom:14px;">
+              <div class="card__pad">
+                <strong style="color:#ff6b6b;"><%= error %></strong>
+              </div>
+            </div>
+          <% } %>
+
+          <form class="form" method="POST" action="/contact">
+
+            <div class="form__row">
+              <input class="input" name="company" placeholder="Company Name" required />
+              <input class="input" name="email" type="email" placeholder="Business Email" required />
+            </div>
+
+            <input class="input" name="phone" placeholder="Phone Number (optional)" />
+
+            <textarea class="textarea" name="message"
+              placeholder="Your growth goal (e.g., automate leads, customer support, school tasks)"></textarea>
+
+            <button class="btn btn--primary" type="submit">Send Request</button>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
